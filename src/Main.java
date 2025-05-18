@@ -24,5 +24,40 @@ public class Main {
     System.out.println(mentoria);
 
 
+    Bootcamp bootcamp = new Bootcamp();
+    bootcamp.setNome("Bootcamp Java Developer");
+    bootcamp.setDescricao("Descrição Bootcamp Java Devoleper");
+    bootcamp.getConteudos().add(curso1);
+    bootcamp.getConteudos().add(curso2);
+    bootcamp.getConteudos().add(mentoria);
+
+    Dev devCamila = new Dev();
+    devCamila.setNome("Camila");
+    devCamila.inscreverBootcamp(bootcamp);
+    System.out.println("Conteúdos Inscritos Camila:" + devCamila.getConteudosInscritos());
+
+    devCamila.progredir();
+    devCamila.progredir();
+    System.out.println("-");
+    System.out.println("Conteúdos Inscritos Camila:" + devCamila.getConteudosInscritos());
+    System.out.println("Conteúdos Concluidos Camila:" + devCamila.getConteudosConcluidos());
+    System.out.println("XP:" + devCamila.calcularTotalXp());
+
+    System.out.println("-----------------------");
+
+    Dev devjoao = new Dev();
+    devjoao.setNome("joão");
+    devjoao.inscreverBootcamp(bootcamp);
+    System.out.println("Conteúdos Inscritos João:" + devjoao.getConteudosInscritos());
+
+    devjoao.progredir();
+    devjoao.progredir();
+    devjoao.progredir();
+    System.out.println("-");
+    System.out.println("Conteúdos Inscritos João:" + devjoao.getConteudosInscritos());
+    System.out.println("Conteúdos Concluidos João:" + devjoao.getConteudosConcluidos());
+    System.out.println("XP:" + devjoao.calcularTotalXp());
+
+
     }
 }
